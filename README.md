@@ -19,3 +19,11 @@ Registrar pagos realizados, indicando el método de pago (tarjeta, transferencia
 
 #Soporte Técnico: Permitir registrar solicitudes de soporte técnico, asociándolas a un cliente y un servicio específico.
 Registrar la fecha de solicitud, estado (pendiente, en proceso, resuelto) y una descripción del problema.
+
+
+##INTEGRANTES:
+1)Jose Leonidas Mejia Raza
+2)Alexandro Aymar Altamirano Fajardo
+3)Junnior Andrei Quezada Paucar
+4)Aracelli Suyon Valencia
+5)José Iván Rojas Díaz
