@@ -27,3 +27,33 @@ Registrar la fecha de solicitud, estado (pendiente, en proceso, resuelto) y una 
 3)Junnior Andrei Quezada Paucar
 4)Aracelli Suyon Valencia
 5)José Iván Rojas Díaz
+
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+													
+![image](https://github.com/user-attachments/assets/44497404-203c-4c11-8a3a-ae73786052ab)
+
