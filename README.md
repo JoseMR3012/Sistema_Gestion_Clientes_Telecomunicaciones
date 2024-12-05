@@ -57,3 +57,4 @@ Registrar la fecha de solicitud, estado (pendiente, en proceso, resuelto) y una 
 													
 ![image](https://github.com/user-attachments/assets/44497404-203c-4c11-8a3a-ae73786052ab)
 
+https://dbdesigner.page.link/dn1icvadcpsVesq76
