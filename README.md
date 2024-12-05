@@ -1,5 +1,5 @@
 # GRUPO 10
-##INTEGRANTES:
+INTEGRANTES:
 1)Jose Leonidas Mejia Raza
 2)Alexandro Aymar Altamirano Fajardo
 3)Junnior Andrei Quezada Paucar
