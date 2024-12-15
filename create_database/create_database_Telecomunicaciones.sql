@@ -1,0 +1,2 @@
+CREATE DATABASE dsrp_sistema_gestion_telecomunicaciones
+GO
