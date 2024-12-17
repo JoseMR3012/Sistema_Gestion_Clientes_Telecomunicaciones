@@ -132,4 +132,32 @@ CREATE TABLE contrato_servicio (
 GO
 
 SELECT*FROM contrato_servicio;
-S
+
+--Tabla factura
+ALTER TABLE factura
+ADD moneda VARCHAR(10) NOT NULL DEFAULT 'USD',
+    descuento FLOAT DEFAULT 0.0,
+    fecha_creacion DATETIME DEFAULT GETDATE(),
+    fecha_actualizacion DATETIME NULL,
+    usuario_creador VARCHAR(50) NULL;
+GO
+-- Tabla de Pagos
+ALTER TABLE pago
+ADD referencia_pago VARCHAR(200) NULL,
+    estado_pago VARCHAR(50) NOT NULL DEFAULT 'Pendiente',
+    fecha_creacion DATETIME DEFAULT GETDATE(),
+    fecha_actualizacion DATETIME NULL;
+
+-- Tabla de Servicios
+ALTER TABLE servicio
+ADD fecha_creacion DATETIME DEFAULT GETDATE(),
+    fecha_actualizacion DATETIME NULL,
+    usuario_creador VARCHAR(50) NULL;
+
+-- Tabla de Soporte Técnico: Más Información sobre Resolución
+ALTER TABLE soporte_tecnico
+ADD fecha_resolucion DATETIME NULL,
+    tecnico_asignado VARCHAR(255) NULL,
+    comentarios VARCHAR(1000) NULL,
+    fecha_creacion DATETIME DEFAULT GETDATE(),
+    fecha_actualizacion DATETIME NULL;
