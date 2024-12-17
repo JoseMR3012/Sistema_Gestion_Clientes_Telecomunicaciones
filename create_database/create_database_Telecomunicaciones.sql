@@ -33,6 +33,7 @@ descuento FLOAT NOT NULL
 );
 GO
 
+SELECT*FROM servicio;
 --Agregando soporte_id en la tabla servicio
 ALTER TABLE servicio
 ADD soporte_id INT NOT NULL;
@@ -104,3 +105,31 @@ VALUES
 ('2024-06-09', 'En Proceso', 'Solicitud de recuperación de archivos eliminados.'),
 ('2024-06-10', 'Pendiente', 'El correo electrónico corporativo no recibe mensajes.');
 GO
+--- Tabla de Clientes agregando columnas
+ALTER TABLE cliente
+ADD fecha_creacion DATETIME DEFAULT GETDATE(),
+    fecha_actualizacion DATETIME NULL,
+    usuario_creador VARCHAR(250) NULL,
+    usuario_modificador VARCHAR(250) NULL;
+SELECT*FROM cliente;
+
+SELECT*FROM contrato;
+SELECT*FROM servicio;
+--- Tabla de Contrato agregando columnas
+ALTER TABLE contrato
+ADD fecha_creacion DATETIME DEFAULT GETDATE(),
+    fecha_actualizacion DATETIME NULL;
+
+-- Creacion de tabla intermedia
+CREATE TABLE contrato_servicio (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    contratosv_id INT NOT NULL,
+    servicio_id INT NOT NULL,
+    fecha_asociacion DATETIME DEFAULT GETDATE(),
+    CONSTRAINT FK_contrato_servicio_contrato FOREIGN KEY (contratosv_id) REFERENCES contrato(id),
+    CONSTRAINT FK_contrato_servicio_servicio FOREIGN KEY (servicio_id) REFERENCES servicio(id)
+);
+GO
+
+SELECT*FROM contrato_servicio;
+S

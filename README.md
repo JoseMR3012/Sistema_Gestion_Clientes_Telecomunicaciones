@@ -28,15 +28,15 @@ Registrar pagos realizados, indicando el método de pago (tarjeta, transferencia
 #Soporte Técnico: Permitir registrar solicitudes de soporte técnico, asociándolas a un cliente y un servicio específico.
 Registrar la fecha de solicitud, estado (pendiente, en proceso, resuelto) y una descripción del problema.
 
-##Modelo entidad relacion	  
+## Modelo entidad relacion	  
 ![image](https://github.com/user-attachments/assets/44497404-203c-4c11-8a3a-ae73786052ab)
 
-##Diagrama lógico en dbdesigner:
+## Diagrama lógico en dbdesigner:
 https://dbdesigner.page.link/dn1icvadcpsVesq76
 
 ![image](https://github.com/user-attachments/assets/c0ef6e3b-f5aa-4105-9d13-e361cdc6bb19)
 
-##Modelo Fisico
+## Modelo Fisico
 ![image](https://github.com/user-attachments/assets/c3b6e6e3-0046-4013-b2b2-a170df36c0c6)
 
 
