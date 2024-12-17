@@ -161,3 +161,19 @@ ADD fecha_resolucion DATETIME NULL,
     comentarios VARCHAR(1000) NULL,
     fecha_creacion DATETIME DEFAULT GETDATE(),
     fecha_actualizacion DATETIME NULL;
+
+--Agregando datos a la tabla pago
+INSERT INTO pago(fecha_pago,monto_pago,metodo_pago,referencia_pago)
+VALUES 
+('2024-01-05', 100.00, 'Tarjeta Crédito', 'REF001'),
+('2024-01-10', 150.50, 'Transferencia', 'REF002'),
+('2024-01-15', 200.75, 'Efectivo', 'REF003'),
+('2024-01-20', 120.00, 'PayPal', 'REF004'),
+('2024-01-25', 300.00, 'Cheque', 'REF005'),
+('2024-02-01', 500.00, 'Tarjeta Débito', 'REF006'),
+('2024-02-05', 450.25, 'Transferencia', 'REF007'),
+('2024-02-10', 600.00, 'Tarjeta Crédito', 'REF008'),
+('2024-02-15', 700.50, 'Efectivo', 'REF009'),
+('2024-02-20', 800.00, 'PayPal', 'REF010');
+
+SELECT*FROM pago;
