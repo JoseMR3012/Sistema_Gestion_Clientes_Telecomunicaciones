@@ -226,3 +226,4 @@ VALUES
 (20, 20, 20, '2122334455', 'Cristina', 'Jiménez', 'Rodríguez', 'cristina.jimenez@example.com', 'Individual', 'Calle Fuego 1717', '987654340', GETDATE(), GETDATE(), 'admin', 'admin');
 GO
 
+SELECT*FROM pago;
