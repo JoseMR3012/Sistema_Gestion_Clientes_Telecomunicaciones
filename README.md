@@ -33,12 +33,10 @@ Registrar la fecha de solicitud, estado (pendiente, en proceso, resuelto) y una 
 
 ## Diagrama lógico en dbdesigner:
 https://dbdesigner.page.link/dn1icvadcpsVesq76
-
-![image](https://github.com/user-attachments/assets/c5945b26-4ce4-4a55-9322-75ecc5b9f21c)
-
+![image](https://github.com/user-attachments/assets/661f9708-8b0d-40c4-af61-b621b2e55970)
 
 ## Modelo Fisico
-![image](https://github.com/user-attachments/assets/c3b6e6e3-0046-4013-b2b2-a170df36c0c6)
+![image](https://github.com/user-attachments/assets/941cc5a1-1d1b-48a8-95af-f6015f9ba19e)
 
 
 
