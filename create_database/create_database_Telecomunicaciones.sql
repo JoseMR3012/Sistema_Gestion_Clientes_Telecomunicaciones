@@ -32,6 +32,9 @@ precio_mensual FLOAT NOT NULL,
 descuento FLOAT NOT NULL
 );
 GO
+ALTER TABLE servicio
+ALTER COLUMN descuento DECIMAL(5, 2) NOT NULL;
+GO
 
 SELECT*FROM servicio;
 --Agregando soporte_id en la tabla servicio
@@ -90,21 +93,6 @@ GO
 --Llamada de tabla de soporte_tecnico
 SELECT*FROM soporte_tecnico;
 
--- Insertando datos a la tabla independiente soporte_tecnico 
-
-INSERT INTO soporte_tecnico (fecha_solicitud, estado_solicitud, descripcion_problema)
-VALUES
-('2024-06-01', 'Pendiente', 'El equipo no enciende después de una actualización.'),
-('2024-06-02', 'En Proceso', 'Problema con el acceso al servidor principal.'),
-('2024-06-03', 'Resuelto', 'Solicitud de cambio de contraseña de usuario.'),
-('2024-06-04', 'Pendiente', 'Falla en la conexión de red en el área de sistemas.'),
-('2024-06-05', 'Resuelto', 'Error en el software de gestión de inventario.'),
-('2024-06-06', 'En Proceso', 'El sistema operativo presenta pantalla azul al iniciar.'),
-('2024-06-07', 'Pendiente', 'Solicitud de instalación de software de diseño gráfico.'),
-('2024-06-08', 'Resuelto', 'Configuración incorrecta de impresora de red.'),
-('2024-06-09', 'En Proceso', 'Solicitud de recuperación de archivos eliminados.'),
-('2024-06-10', 'Pendiente', 'El correo electrónico corporativo no recibe mensajes.');
-GO
 --- Tabla de Clientes agregando columnas
 ALTER TABLE cliente
 ADD fecha_creacion DATETIME DEFAULT GETDATE(),
@@ -156,9 +144,9 @@ ADD fecha_creacion DATETIME DEFAULT GETDATE(),
 
 -- Tabla de Soporte Técnico: Más Información sobre Resolución
 ALTER TABLE soporte_tecnico
-ADD fecha_resolucion DATETIME NULL,
-    tecnico_asignado VARCHAR(255) NULL,
-    comentarios VARCHAR(1000) NULL,
+ADD fecha_resolucion DATETIME NOT NULL,
+    tecnico_asignado VARCHAR(255) NOT NNULL,
+    comentarios VARCHAR(1000) NOT NULL,
     fecha_creacion DATETIME DEFAULT GETDATE(),
-    fecha_actualizacion DATETIME NULL;
+    fecha_actualizacion DATETIME NOT NULL;
 SELECT*FROM pago;
