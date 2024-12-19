@@ -55,7 +55,6 @@ VALUES
 GO
 --Insertar datos en tabla factura
 SELECT*FROM factura;
-
 INSERT INTO factura([pago_id], [fecha_emision], [fecha_vencimiento], [monto_total], [estado_pago], [moneda], [descuento], [fecha_creacion], [fecha_actualizacion], [usuario_creador])
 VALUES 
 (1, '2024-12-01', '2024-12-15', 150.75, 'Pendiente', 'USD', 0.00, GETDATE(), GETDATE(), 'admin'),
@@ -140,3 +139,90 @@ VALUES
 ('2024-03-20', 'Pendiente', 'El servicio no responde', '2024-03-22', 'Felipe López', 'Inspección externa requerida', GETDATE(), GETDATE()),
 ('2024-03-25', 'Resuelto', 'Problema con la conexión de internet', '2024-03-27', 'Luis Pérez', 'Problema resuelto al actualizar configuración', GETDATE(), GETDATE());
 GO
+-- Insertar datos en la tabla servicio
+SELECT*FROM servicio;
+INSERT INTO servicio([nombre_servicio], [precio_mensual], [descuento], [soporte_id], [fecha_creacion], [fecha_actualizacion], [usuario_creador])
+VALUES 
+('Internet 10 Mbps', 29.99, 5.00, 1, GETDATE(), GETDATE(), 'admin'),
+('Internet 20 Mbps', 39.99, 5.00, 2, GETDATE(), GETDATE(), 'admin'),
+('Internet 50 Mbps', 59.99, 10.00, 3, GETDATE(), GETDATE(), 'admin'),
+('Internet 100 Mbps', 89.99, 10.00, 4, GETDATE(), GETDATE(), 'admin'),
+('Internet 200 Mbps', 129.99, 15.00, 5, GETDATE(), GETDATE(), 'admin'),
+('Internet 500 Mbps', 199.99, 20.00, 6, GETDATE(), GETDATE(), 'admin'),
+('Internet 1 Gbps', 299.99, 25.00, 7, GETDATE(), GETDATE(), 'admin'),
+('TV Básica', 14.99, 3.00, 8, GETDATE(), GETDATE(), 'admin'),
+('TV Interactiva', 29.99, 5.00, 9, GETDATE(), GETDATE(), 'admin'),
+('TV Premium', 49.99, 7.00, 10, GETDATE(), GETDATE(), 'admin'),
+('Paquete Triple Play', 99.99, 10.00, 11, GETDATE(), GETDATE(), 'admin'),
+('Paquete Doble Play', 69.99, 8.00, 12, GETDATE(), GETDATE(), 'admin'),
+('Telefonía Fija', 9.99, 2.00, 13, GETDATE(), GETDATE(), 'admin'),
+('Paquete de Llamadas Internacionales', 19.99, 5.00, 14, GETDATE(), GETDATE(), 'admin'),
+('Internet + TV Básica', 44.99, 10.00, 15, GETDATE(), GETDATE(), 'admin'),
+('Internet + TV Interactiva', 59.99, 12.00, 16, GETDATE(), GETDATE(), 'admin'),
+('Internet + TV Premium', 79.99, 15.00, 17, GETDATE(), GETDATE(), 'admin'),
+('Paquete Familiar', 129.99, 20.00, 18, GETDATE(), GETDATE(), 'admin'),
+('Paquete Empresarial', 199.99, 25.00, 19, GETDATE(), GETDATE(), 'admin'),
+('Soporte Premium', 49.99, 5.00, 20, GETDATE(), GETDATE(), 'admin');
+GO
+-- Insertar datos en la tabla contrato_servicio
+SELECT*FROM contrato_servicio;
+INSERT INTO contrato_servicio([contratosv_id], [servicio_id], [fecha_asociacion])
+VALUES 
+(1, 1, GETDATE()),
+(2, 2, GETDATE()),
+(3, 3, GETDATE()),
+(4, 4, GETDATE()),
+(5, 5, GETDATE()),
+(6, 6, GETDATE()),
+(7, 7, GETDATE()),
+(8, 8, GETDATE()),
+(9, 9, GETDATE()),
+(10, 10, GETDATE()),
+(11, 11, GETDATE()),
+(12, 12, GETDATE()),
+(13, 13, GETDATE()),
+(14, 14, GETDATE()),
+(15, 15, GETDATE()),
+(16, 16, GETDATE()),
+(17, 17, GETDATE()),
+(18, 18, GETDATE()),
+(19, 19, GETDATE()),
+(20, 20, GETDATE()),
+(21, 1, GETDATE()),
+(22, 2, GETDATE()),
+(23, 3, GETDATE()),
+(24, 4, GETDATE()),
+(25, 5, GETDATE()),
+(26, 6, GETDATE()),
+(27, 7, GETDATE()),
+(28, 8, GETDATE()),
+(29, 9, GETDATE()),
+(30, 10, GETDATE());
+GO
+-- Ingresar datos de la tabla cliente
+SELECT*FROM cliente;
+INSERT INTO cliente([factura_id], [contrato_id], [servicio_id], [numero_documento], [nombres], [apellido_paterno], [apellido_materno], 
+[correo_electronico], [tipo_cliente], [direccion], [telefono], [fecha_creacion], [fecha_actualizacion], [usuario_creador], [usuario_modificador])
+VALUES 
+(1, 1, 1, '1234567890', 'Juan', 'Pérez', 'Gómez', 'juan.perez@example.com', 'Individual', 'Calle Ficticia 123', '987654321', GETDATE(), GETDATE(), 'admin', 'admin'),
+(2, 2, 2, '2345678901', 'Ana', 'Lopez', 'Martínez', 'ana.lopez@example.com', 'Individual', 'Avenida Real 456', '987654322', GETDATE(), GETDATE(), 'admin', 'admin'),
+(3, 3, 3, '3456789012', 'Carlos', 'Gómez', 'Sánchez', 'carlos.gomez@example.com', 'Empresarial', 'Calle El Sol 789', '987654323', GETDATE(), GETDATE(), 'admin', 'admin'),
+(4, 4, 4, '4567890123', 'Laura', 'Martín', 'Pérez', 'laura.martin@example.com', 'Individual', 'Calle Luna 101', '987654324', GETDATE(), GETDATE(), 'admin', 'admin'),
+(5, 5, 5, '5678901234', 'Pedro', 'Fernández', 'Ramírez', 'pedro.fernandez@example.com', 'Empresarial', 'Calle Marte 202', '987654325', GETDATE(), GETDATE(), 'admin', 'admin'),
+(6, 6, 6, '6789012345', 'Sofía', 'Rodríguez', 'Díaz', 'sofia.rodriguez@example.com', 'Individual', 'Avenida Estrella 303', '987654326', GETDATE(), GETDATE(), 'admin', 'admin'),
+(7, 7, 7, '7890123456', 'Luis', 'García', 'Torres', 'luis.garcia@example.com', 'Empresarial', 'Calle Rayo 404', '987654327', GETDATE(), GETDATE(), 'admin', 'admin'),
+(8, 8, 8, '8901234567', 'Marta', 'Hernández', 'Jiménez', 'marta.hernandez@example.com', 'Individual', 'Calle Viento 505', '987654328', GETDATE(), GETDATE(), 'admin', 'admin'),
+(9, 9, 9, '9012345678', 'José', 'Sánchez', 'Vargas', 'jose.sanchez@example.com', 'Empresarial', 'Avenida Cielo 606', '987654329', GETDATE(), GETDATE(), 'admin', 'admin'),
+(10, 10, 10, '1122334455', 'Isabel', 'Martínez', 'Gómez', 'isabel.martinez@example.com', 'Individual', 'Calle Tierra 707', '987654330', GETDATE(), GETDATE(), 'admin', 'admin'),
+(11, 11, 11, '2233445566', 'Miguel', 'Ramírez', 'López', 'miguel.ramirez@example.com', 'Empresarial', 'Calle Agua 808', '987654331', GETDATE(), GETDATE(), 'admin', 'admin'),
+(12, 12, 12, '3344556677', 'Elena', 'Rodríguez', 'Torres', 'elena.rodriguez@example.com', 'Individual', 'Avenida Sol 909', '987654332', GETDATE(), GETDATE(), 'admin', 'admin'),
+(13, 13, 13, '4455667788', 'Antonio', 'González', 'Ramírez', 'antonio.gonzalez@example.com', 'Empresarial', 'Calle Noche 1010', '987654333', GETDATE(), GETDATE(), 'admin', 'admin'),
+(14, 14, 14, '5566778899', 'Patricia', 'Hernández', 'Mora', 'patricia.hernandez@example.com', 'Individual', 'Calle Luz 1111', '987654334', GETDATE(), GETDATE(), 'admin', 'admin'),
+(15, 15, 15, '6677889900', 'Raúl', 'Fernández', 'Márquez', 'raul.fernandez@example.com', 'Empresarial', 'Avenida Tierra 1212', '987654335', GETDATE(), GETDATE(), 'admin', 'admin'),
+(16, 16, 16, '7788990011', 'Paula', 'García', 'Álvarez', 'paula.garcia@example.com', 'Individual', 'Calle Mar 1313', '987654336', GETDATE(), GETDATE(), 'admin', 'admin'),
+(17, 17, 17, '8899001122', 'Javier', 'Mendoza', 'López', 'javier.mendoza@example.com', 'Empresarial', 'Calle Cielo 1414', '987654337', GETDATE(), GETDATE(), 'admin', 'admin'),
+(18, 18, 18, '9900112233', 'Sara', 'Torres', 'Figueroa', 'sara.torres@example.com', 'Individual', 'Avenida Luna 1515', '987654338', GETDATE(), GETDATE(), 'admin', 'admin'),
+(19, 19, 19, '1011223344', 'Ricardo', 'Santos', 'Pérez', 'ricardo.santos@example.com', 'Empresarial', 'Calle Viento 1616', '987654339', GETDATE(), GETDATE(), 'admin', 'admin'),
+(20, 20, 20, '2122334455', 'Cristina', 'Jiménez', 'Rodríguez', 'cristina.jimenez@example.com', 'Individual', 'Calle Fuego 1717', '987654340', GETDATE(), GETDATE(), 'admin', 'admin');
+GO
+
